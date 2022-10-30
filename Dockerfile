@@ -3,7 +3,7 @@ FROM ubuntu
 RUN apt update -y && apt install apache2 -y
 
 # Copy file index html
-COPY index.html /var/www/html
+COPY ./app /var/www/html
 
 # jalankan service Pache
 CMD apachectl -DFOREGROUND
